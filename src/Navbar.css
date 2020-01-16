@@ -1,8 +1,6 @@
 .navbar {
   display: flex;
   align-items: center;
-  /* justify-content: flex-start; */
-  justify-content: space-between;
   height: 6vh;
 }
 
@@ -48,4 +46,9 @@
 
 .rc-slider-rail {
   height: 8px;
+}
+
+.select-container {
+  margin-left: auto;
+  margin-right: 3rem;
 }
