@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import Pallet from './Pallet';
 import ColorPaller from './seedColors';
 import { generatePallet } from './ColorHelpers';
 import './App.css';
+import PalletList from './PalletList';
+import seedColors from './seedColors';
 
 class App extends Component {
   findPallet = id => {
@@ -11,11 +14,13 @@ class App extends Component {
   };
 
   render() {
-    console.log(generatePallet(ColorPaller[2]));
-
     return (
       <Switch>
-        <Route exact path="/" render={() => <h1>Hello world</h1>} />
+        <Route
+          exact
+          path="/"
+          render={() => <PalletList pallets={seedColors} />}
+        />
         <Route
           path="/pallet/:id"
           render={route => (
