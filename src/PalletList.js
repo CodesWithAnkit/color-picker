@@ -6,7 +6,7 @@ import Minipallet from './Minipallet';
 const styles = {
   root: {
     backgroundColor: 'red',
-    height: '100%',
+    height: '100vh',
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'center'
