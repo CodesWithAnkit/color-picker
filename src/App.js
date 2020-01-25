@@ -19,7 +19,9 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => <PalletList pallets={seedColors} />}
+          render={routeProps => (
+            <PalletList pallets={seedColors} {...routeProps} />
+          )}
         />
         <Route
           path="/pallet/:id"
