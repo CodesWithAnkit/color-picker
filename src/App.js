@@ -31,6 +31,11 @@ class App extends Component {
             />
           )}
         />
+        <Route
+          exact
+          path="/pallet/:palletId/:colorId"
+          render={() => <h1>Single Pallet Page</h1>}
+        />
       </Switch>
     );
   }
