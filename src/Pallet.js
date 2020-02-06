@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
+import PalletFooter from './PalletFooter';
 import ColorBox from './ColorBox';
 import './Pallet.css';
 
@@ -33,12 +34,10 @@ class Pallet extends Component {
           level={level}
           changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
+          showingAllColor
         />
         <div className="Palette-colors">{colorBoxes}</div>
-        <footer className="patette-footer">
-          {palletName}
-          <span className="emoji">{emoji}</span>
-        </footer>
+        <PalletFooter palletName={palletName} emoji={emoji} />
       </div>
     );
   }
