@@ -7,6 +7,7 @@ import { generatePallet } from './ColorHelpers';
 import './App.css';
 import PalletList from './PalletList';
 import seedColors from './seedColors';
+import SingleColorPallet from './SingleColorPallet';
 
 class App extends Component {
   findPallet = id => {
@@ -16,6 +17,11 @@ class App extends Component {
   render() {
     return (
       <Switch>
+        <Route
+          exact
+          path="/pallet/:palletId/:colorId"
+          render={() => <SingleColorPallet />}
+        />
         <Route
           exact
           path="/"
@@ -30,11 +36,6 @@ class App extends Component {
               palette={generatePallet(this.findPallet(route.match.params.id))}
             />
           )}
-        />
-        <Route
-          exact
-          path="/pallet/:palletId/:colorId"
-          render={() => <h1>Single Pallet Page</h1>}
         />
       </Switch>
     );
