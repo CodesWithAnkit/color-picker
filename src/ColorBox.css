@@ -8,7 +8,16 @@
   margin-bottom: -3.5px;
 }
 
-.copy-button {
+.singlecolorpallet .ColorBox {
+  height: 50%;
+}
+
+.ColorBox.goBack {
+  background-color: black;
+}
+
+.copy-button,
+.back-btn {
   width: 100px;
   height: 30px;
   position: absolute;
@@ -18,12 +27,16 @@
   margin: -15px 0 0 -50px;
   text-align: center;
   outline: none;
-  background: rgba(0, 0, 0, 0.3);
+  background: #af8d8d4d;
   color: white;
   font-size: 1rem;
   line-height: 20px;
   text-transform: uppercase;
   border: none;
+  text-decoration: none;
+}
+
+.copy-button {
   opacity: 0;
 }
 
